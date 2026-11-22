@@ -116,3 +116,13 @@ add_action( 'init', function () {
 		)
 	);
 } );
+
+/**
+ * Hide WooCommerce's own "126 in stock" line where the stock line already shows warehouse counts.
+ */
+add_filter( 'woocommerce_get_stock_html', function ( $html, $product ) {
+	if ( $product && null !== vectra_meta_int( $product->get_id(), '_vectra_stock_cpt' ) ) {
+		return '';
+	}
+	return $html;
+}, 10, 2 );

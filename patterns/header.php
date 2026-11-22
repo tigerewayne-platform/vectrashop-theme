@@ -12,10 +12,10 @@ $vectra_home = esc_url( home_url( '/' ) );
 <!-- wp:group {"tagName":"header","className":"vectra-header","backgroundColor":"graphite-frame","textColor":"frame-ink","layout":{"type":"default"}} -->
 <header class="wp-block-group vectra-header has-frame-ink-color has-graphite-frame-background-color has-text-color has-background">
 
-<!-- wp:group {"className":"vectra-topstrip","backgroundColor":"graphite","textColor":"frame-ink","fontSize":"small","layout":{"type":"constrained","contentSize":"1280px"}} -->
-<div class="wp-block-group vectra-topstrip has-frame-ink-color has-graphite-background-color has-text-color has-background has-small-font-size">
+<!-- wp:group {"className":"vectra-topstrip","backgroundColor":"tile","textColor":"graphite","fontSize":"small","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<div class="wp-block-group vectra-topstrip has-graphite-color has-tile-background-color has-text-color has-background has-small-font-size">
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">No surprises. Just tech. · Real stock in Cape Town &amp; Johannesburg · <a href="/promises/">Things we won't do</a></p>
+<p class="has-text-align-center">Real stock in Cape Town &amp; Johannesburg · Pay by card or instant EFT · <a href="/promises/">Things we won't do</a></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -24,9 +24,16 @@ $vectra_home = esc_url( home_url( '/' ) );
 <div class="wp-block-group vectra-header__main">
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group">
+<!-- wp:group {"className":"vectra-brandmark","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+<div class="wp-block-group vectra-brandmark">
 <!-- wp:image {"width":"200px","sizeSlug":"full","linkDestination":"custom","className":"vectra-logo"} -->
 <figure class="wp-block-image size-full is-resized vectra-logo"><a href="<?php echo $vectra_home; ?>"><img src="<?php echo $vectra_logo; ?>" alt="Vectra Shop" style="width:200px"/></a></figure>
 <!-- /wp:image -->
+<!-- wp:paragraph {"className":"vectra-logo-tag"} -->
+<p class="vectra-logo-tag">No surprises. Just tech.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 
 <!-- wp:search {"label":"Search products","showLabel":false,"placeholder":"Search products, brands or SKUs","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"query":{"post_type":"product"}} /-->
 

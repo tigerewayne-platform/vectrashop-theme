@@ -173,3 +173,14 @@ main.wp-block-group { padding-block: var(--wp--preset--spacing--space-8); }
 .vectra-promise h2 { margin: 0 0 8px; text-wrap: balance; }
 .vectra-promise p { margin: 0; color: var(--wp--preset--color--slate); max-width: 62ch; }
 .vectra-promises__foot { border-top: 1px solid var(--wp--preset--color--hairline); padding-top: var(--wp--preset--spacing--space-5); }
+
+/* v0.3.1: tighter header, light top strip, tagline under the logo */
+.vectra-header > * + * { margin-block-start: 0; }
+.vectra-header__main { padding-block: 16px; }
+.vectra-topstrip { border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vectra-topstrip a { color: var(--wp--preset--color--copper-text); }
+.vectra-brandmark { gap: 4px; }
+.vectra-brandmark .vectra-logo { margin: 0; }
+.vectra-logo-tag { margin: 0; padding-left: 2px; font-size: 13px; letter-spacing: .01em; color: var(--wp--preset--color--slate); }
+.vectra-header .vectra-logo-tag { color: #9AA5B3; }
+@media (max-width: 600px) { .vectra-topstrip p { font-size: 12px; } }
