@@ -33,9 +33,9 @@ palette = [
     for t in tokens["color"]["tokens"]
 ]
 
+# One variable file serves both roles; the face is declared once, on display.
 FONT_FILES = {
-    "display": ("Sora", "Sora-Variable.woff2", "400 800"),
-    "sans": ("Manrope", "Manrope-Variable.woff2", "200 800"),
+    "display": ("Geist", "Geist-Variable.woff2", "100 900"),
 }
 families = []
 for slug, stack in tokens["type"]["families"].items():
