@@ -24,7 +24,7 @@ add_action( 'after_setup_theme', function () {
 } );
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'vectra', get_theme_file_uri( 'assets/css/vectra.css' ), array(), VECTRA_VERSION );
+	wp_enqueue_style( 'vectra', get_theme_file_uri( 'assets/css/vectra.css' ), array(), VECTRA_VERSION . '.' . filemtime( get_theme_file_path( 'assets/css/vectra.css' ) ) );
 } );
 
 /**
