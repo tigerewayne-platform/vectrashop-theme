@@ -15,7 +15,7 @@ $vectra_home = esc_url( home_url( '/' ) );
 <!-- wp:group {"className":"vectra-topstrip","backgroundColor":"graphite","textColor":"frame-ink","fontSize":"small","layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group vectra-topstrip has-frame-ink-color has-graphite-background-color has-text-color has-background has-small-font-size">
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Stock in Cape Town &amp; Johannesburg · Pay by card or instant EFT</p>
+<p class="has-text-align-center">No surprises. Just tech. · Real stock in Cape Town &amp; Johannesburg · <a href="/promises/">Things we won't do</a></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -24,8 +24,8 @@ $vectra_home = esc_url( home_url( '/' ) );
 <div class="wp-block-group vectra-header__main">
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group">
-<!-- wp:image {"width":"220px","sizeSlug":"full","linkDestination":"custom","className":"vectra-logo"} -->
-<figure class="wp-block-image size-full is-resized vectra-logo"><a href="<?php echo $vectra_home; ?>"><img src="<?php echo $vectra_logo; ?>" alt="Vectra Shop" style="width:220px"/></a></figure>
+<!-- wp:image {"width":"200px","sizeSlug":"full","linkDestination":"custom","className":"vectra-logo"} -->
+<figure class="wp-block-image size-full is-resized vectra-logo"><a href="<?php echo $vectra_home; ?>"><img src="<?php echo $vectra_logo; ?>" alt="Vectra Shop" style="width:200px"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:search {"label":"Search products","showLabel":false,"placeholder":"Search products, brands or SKUs","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"query":{"post_type":"product"}} /-->

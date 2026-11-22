@@ -1,10 +1,9 @@
 /* Small additions theme.json cannot express. Colours only via --wp--preset--color--* tokens. */
 
 /* Stock by warehouse */
-.vectra-stock { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: var(--wp--preset--font-size--small); font-weight: 600; }
+.vectra-stock { display: flex; flex-direction: column; gap: 2px; font-size: var(--wp--preset--font-size--small); font-weight: 600; }
 .vectra-stock__row { display: inline-flex; align-items: center; gap: 6px; }
 .vectra-stock__row i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: currentColor; }
-.vectra-stock__row b { font-weight: 800; letter-spacing: .04em; }
 .vectra-stock__row.is-in  { color: var(--wp--preset--color--stock-in); }
 .vectra-stock__row.is-low, .vectra-stock__row.is-eta { color: var(--wp--preset--color--stock-low); }
 .vectra-stock__row.is-out { color: var(--wp--preset--color--stock-out); }
@@ -164,3 +163,13 @@ main.wp-block-group { padding-block: var(--wp--preset--spacing--space-8); }
 
 /* Front page main spacing */
 .vectra-home { padding-block: var(--wp--preset--spacing--space-8) 0; }
+
+/* v0.3: promises page and top strip link */
+.vectra-topstrip a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.vectra-trust a { color: var(--wp--preset--color--copper-text); }
+.vectra-page { padding-block: var(--wp--preset--spacing--space-8); }
+.vectra-promises__lede { font-size: 1.25rem; line-height: 1.5; color: var(--wp--preset--color--graphite); margin-block-end: var(--wp--preset--spacing--space-8); text-wrap: pretty; }
+.vectra-promise { border-top: 1px solid var(--wp--preset--color--hairline); padding-block: var(--wp--preset--spacing--space-5); }
+.vectra-promise h2 { margin: 0 0 8px; text-wrap: balance; }
+.vectra-promise p { margin: 0; color: var(--wp--preset--color--slate); max-width: 62ch; }
+.vectra-promises__foot { border-top: 1px solid var(--wp--preset--color--hairline); padding-top: var(--wp--preset--spacing--space-5); }
