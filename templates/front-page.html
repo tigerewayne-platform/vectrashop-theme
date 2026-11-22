@@ -1,54 +1,14 @@
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
-<!-- wp:pattern {"slug":"vectra/hero"} /-->
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained","contentSize":"1280px"}} -->
-<main class="wp-block-group">
-<!-- wp:pattern {"slug":"vectra/category-tiles"} /-->
-<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"1280px"}} -->
-<div class="wp-block-group alignwide">
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Best sellers</h2>
-<!-- /wp:heading -->
-<!-- wp:woocommerce/product-collection {"queryId":1,"query":{"perPage":8,"pages":1,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","search":"","exclude":[],"inherit":false,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/best-sellers"} -->
-<div class="wp-block-woocommerce-product-collection">
-<!-- wp:woocommerce/product-template -->
-<!-- wp:group {"className":"vectra-card","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-<div class="wp-block-group vectra-card">
-<!-- wp:woocommerce/product-image {"showSaleBadge":true,"isDescendentOfQueryLoop":true,"imageSizing":"thumbnail"} /-->
-<!-- wp:post-terms {"term":"product_brand","className":"vectra-brand-label"} /-->
-<!-- wp:post-title {"level":3,"isLink":true,"__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
-<!-- wp:vectra/stock-by-warehouse /-->
-<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /-->
-</div>
-<!-- /wp:group -->
-<!-- /wp:woocommerce/product-template -->
-</div>
-<!-- /wp:woocommerce/product-collection -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"1280px"}} -->
-<div class="wp-block-group alignwide">
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Deals this week</h2>
-<!-- /wp:heading -->
-<!-- wp:woocommerce/product-collection {"queryId":2,"query":{"perPage":8,"pages":1,"offset":0,"postType":"product","order":"desc","orderBy":"date","search":"","exclude":[],"inherit":false,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceOnSale":true,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/on-sale"} -->
-<div class="wp-block-woocommerce-product-collection">
-<!-- wp:woocommerce/product-template -->
-<!-- wp:group {"className":"vectra-card","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-<div class="wp-block-group vectra-card">
-<!-- wp:woocommerce/product-image {"showSaleBadge":true,"isDescendentOfQueryLoop":true,"imageSizing":"thumbnail"} /-->
-<!-- wp:post-terms {"term":"product_brand","className":"vectra-brand-label"} /-->
-<!-- wp:post-title {"level":3,"isLink":true,"__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
-<!-- wp:vectra/stock-by-warehouse /-->
-<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /-->
-</div>
-<!-- /wp:group -->
-<!-- /wp:woocommerce/product-template -->
-</div>
-<!-- /wp:woocommerce/product-collection -->
-</div>
-<!-- /wp:group -->
+<!-- wp:vectra/hero-slider {"align":"full"} /-->
+<!-- wp:group {"tagName":"main","className":"vectra-home","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<main class="wp-block-group vectra-home">
+<!-- wp:vectra/category-carousel {"align":"wide"} /-->
+<!-- wp:vectra/product-rail {"title":"Load-shedding essentials","cats":"ups-inverters,portable-power-stations,power-banks,batteries","limit":12,"orderby":"sales","link":"/product-category/power/","linkLabel":"All power and backup","align":"wide"} /-->
+<!-- wp:vectra/product-rail {"title":"Graphics cards and CPUs","cats":"graphics-cards,cpu","limit":12,"orderby":"price","link":"/product-category/components/","linkLabel":"All components","align":"wide"} /-->
+<!-- wp:vectra/product-rail {"title":"Wi-Fi, mesh and switches","cats":"routers-mesh,range-extenders-access-points,network-switches","limit":12,"orderby":"sales","link":"/product-category/networking-security/","linkLabel":"All networking","align":"wide"} /-->
+<!-- wp:vectra/brand-strip {"align":"full"} /-->
+<!-- wp:vectra/product-rail {"title":"Under R500","maxPrice":500,"excludeCats":"software","limit":16,"orderby":"sales","align":"wide"} /-->
+<!-- wp:vectra/product-rail {"title":"Monitors, keyboards and mice","cats":"monitors,keyboards,mice","limit":12,"orderby":"price","link":"/product-category/computer-peripherals/","linkLabel":"All peripherals","align":"wide"} /-->
 </main>
 <!-- /wp:group -->
 <!-- wp:pattern {"slug":"vectra/trust-strip"} /-->

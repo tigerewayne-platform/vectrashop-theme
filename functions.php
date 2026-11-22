@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'VECTRA_VERSION', wp_get_theme()->get( 'Version' ) );
 
 require_once get_theme_file_path( 'inc/stock.php' );
+require_once get_theme_file_path( 'inc/home.php' );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'woocommerce' );

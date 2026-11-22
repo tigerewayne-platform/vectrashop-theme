@@ -50,7 +50,14 @@ function vectra_meta_int( int $id, string $key ): ?int {
  */
 function vectra_render_stock( $attributes, $content, $block ): string {
 	$product_id = isset( $block->context['postId'] ) ? (int) $block->context['postId'] : get_the_ID();
-	$product    = $product_id ? wc_get_product( $product_id ) : null;
+	return vectra_stock_html( (int) $product_id, get_block_wrapper_attributes( array( 'class' => 'vectra-stock' ) ) );
+}
+
+/**
+ * Stock-by-warehouse markup for any product. Used by the block and by the homepage rails.
+ */
+function vectra_stock_html( int $product_id, string $wrapper = 'class="vectra-stock"' ): string {
+	$product = $product_id ? wc_get_product( $product_id ) : null;
 	if ( ! $product ) {
 		return '';
 	}
@@ -71,8 +78,7 @@ function vectra_render_stock( $attributes, $content, $block ): string {
 		}
 	}
 
-	$wrapper = get_block_wrapper_attributes( array( 'class' => 'vectra-stock' ) );
-	$html    = '<div ' . $wrapper . '>';
+	$html = '<div ' . $wrapper . '>';
 	foreach ( $rows as list( $code, $state, $label ) ) {
 		if ( 'unknown' === $state ) {
 			continue;
