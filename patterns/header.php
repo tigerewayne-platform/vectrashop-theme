@@ -6,7 +6,7 @@
  * Block Types: core/template-part/header
  * Inserter: no
  */
-$vectra_logo = esc_url( get_theme_file_uri( 'assets/logo/vectra-shop-horizontal-reverse.svg' ) );
+$vectra_logo = esc_url( get_theme_file_uri( 'assets/logo/vectra-shop-inline-reverse.svg' ) );
 $vectra_home = esc_url( home_url( '/' ) );
 ?>
 <!-- wp:group {"tagName":"header","className":"vectra-header","backgroundColor":"graphite-frame","textColor":"frame-ink","layout":{"type":"default"}} -->
@@ -24,8 +24,8 @@ $vectra_home = esc_url( home_url( '/' ) );
 <div class="wp-block-group vectra-header__main">
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group">
-<!-- wp:image {"width":"170px","sizeSlug":"full","linkDestination":"custom","className":"vectra-logo"} -->
-<figure class="wp-block-image size-full is-resized vectra-logo"><a href="<?php echo $vectra_home; ?>"><img src="<?php echo $vectra_logo; ?>" alt="Vectra Shop" style="width:170px"/></a></figure>
+<!-- wp:image {"width":"220px","sizeSlug":"full","linkDestination":"custom","className":"vectra-logo"} -->
+<figure class="wp-block-image size-full is-resized vectra-logo"><a href="<?php echo $vectra_home; ?>"><img src="<?php echo $vectra_logo; ?>" alt="Vectra Shop" style="width:220px"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:search {"label":"Search products","showLabel":false,"placeholder":"Search products, brands or SKUs","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"query":{"post_type":"product"}} /-->
