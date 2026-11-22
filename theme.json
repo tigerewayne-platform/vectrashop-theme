@@ -141,15 +141,15 @@
         {
           "slug": "display",
           "name": "Display",
-          "fontFamily": "\"Sora\", \"Segoe UI\", system-ui, sans-serif",
+          "fontFamily": "\"Geist\", \"Segoe UI\", system-ui, sans-serif",
           "fontFace": [
             {
-              "fontFamily": "Sora",
+              "fontFamily": "Geist",
               "fontStyle": "normal",
-              "fontWeight": "400 800",
+              "fontWeight": "100 900",
               "fontDisplay": "swap",
               "src": [
-                "file:./assets/fonts/Sora-Variable.woff2"
+                "file:./assets/fonts/Geist-Variable.woff2"
               ]
             }
           ]
@@ -157,18 +157,7 @@
         {
           "slug": "sans",
           "name": "Sans",
-          "fontFamily": "\"Manrope\", \"Segoe UI\", system-ui, sans-serif",
-          "fontFace": [
-            {
-              "fontFamily": "Manrope",
-              "fontStyle": "normal",
-              "fontWeight": "200 800",
-              "fontDisplay": "swap",
-              "src": [
-                "file:./assets/fonts/Manrope-Variable.woff2"
-              ]
-            }
-          ]
+          "fontFamily": "\"Geist\", \"Segoe UI\", system-ui, sans-serif"
         },
         {
           "slug": "mono",
@@ -230,7 +219,7 @@
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--sans)",
       "fontSize": "var(--wp--preset--font-size--body)",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "lineHeight": "1.6"
     },
     "spacing": {
@@ -246,7 +235,7 @@
           "fontFamily": "var(--wp--preset--font-family--display)",
           "fontWeight": "700",
           "lineHeight": "1.2",
-          "letterSpacing": "-0.01em"
+          "letterSpacing": "-0.02em"
         }
       },
       "h1": {

@@ -1,10 +1,9 @@
 /* Small additions theme.json cannot express. Colours only via --wp--preset--color--* tokens. */
 
 /* Stock by warehouse */
-.vectra-stock { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: var(--wp--preset--font-size--small); font-weight: 600; }
+.vectra-stock { display: flex; flex-direction: column; gap: 2px; font-size: var(--wp--preset--font-size--small); font-weight: 600; }
 .vectra-stock__row { display: inline-flex; align-items: center; gap: 6px; }
 .vectra-stock__row i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: currentColor; }
-.vectra-stock__row b { font-weight: 800; letter-spacing: .04em; }
 .vectra-stock__row.is-in  { color: var(--wp--preset--color--stock-in); }
 .vectra-stock__row.is-low, .vectra-stock__row.is-eta { color: var(--wp--preset--color--stock-low); }
 .vectra-stock__row.is-out { color: var(--wp--preset--color--stock-out); }
@@ -14,10 +13,13 @@
 .vectra-vat { font-size: var(--wp--preset--font-size--small); font-weight: 500; color: var(--wp--preset--color--slate); }
 
 /* Product cards: borders, not shadows */
-.vectra-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-3); height: 100%; }
+.vectra-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-3); height: 100%; display: flex; flex-direction: column; }
+.vectra-card > .wp-block-woocommerce-product-button { margin-top: auto; align-self: stretch; }
+.vectra-card .wc-block-components-product-button { align-items: stretch; }
 .vectra-card .wc-block-components-product-image img,
 .vectra-card .wp-block-woocommerce-product-image img { background: #fff; border-radius: calc(var(--wp--custom--radius--md) - 4px); aspect-ratio: 1; object-fit: contain; }
 .vectra-card .wp-block-post-title { font-size: 0.875rem; line-height: 1.35; }
+.vectra-card .wp-block-post-title a { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .vectra-card .wp-block-post-title a { color: var(--wp--preset--color--graphite); text-decoration: none; }
 .vectra-card .wp-block-post-title a:hover { text-decoration: underline; }
 .vectra-brand-label, .vectra-brand-label a { font-size: 0.6875rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--wp--preset--color--slate); text-decoration: none; }
@@ -55,3 +57,130 @@
 .vectra-tile { padding: var(--wp--preset--spacing--space-5) var(--wp--preset--spacing--space-3); }
 .vectra-tile p { margin: 0; }
 main.wp-block-group { padding-block: var(--wp--preset--spacing--space-8); }
+
+/* =========================================================================
+   v0.2 homepage: hero slider, carousels, brand strip
+   ====================================================================== */
+
+/* Hero slider */
+.vectra-hero--slider { position: relative; overflow: hidden; color: var(--wp--preset--color--frame-ink); background:
+	radial-gradient(60% 90% at 78% 55%, color-mix(in srgb, var(--wp--preset--color--frame-ink) 12%, transparent) 0%, transparent 62%),
+	var(--wp--preset--color--graphite-frame); padding: 0; }
+.vectra-hero--slider::before { content: ""; position: absolute; inset: -20% -10% -20% auto; width: 55%; background: url(../logo/vectra-mark-reverse-transparent.svg) no-repeat right center / contain; opacity: .06; pointer-events: none; }
+.vectra-hero__inner { position: relative; max-width: 1280px; margin-inline: auto; padding-inline: max(16px, 3vw); min-height: clamp(420px, 46vw, 520px); display: grid; }
+.vectra-hero__slide { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: var(--wp--preset--spacing--space-5); padding-block: var(--wp--preset--spacing--space-8); opacity: 0; visibility: hidden; transform: translateX(24px); transition: opacity .6s ease, transform .6s ease, visibility 0s linear .6s; }
+.vectra-hero__slide.is-active { opacity: 1; visibility: visible; transform: none; transition: opacity .6s ease, transform .6s ease; }
+.vectra-hero__title { font-family: var(--wp--preset--font-family--display); font-size: var(--wp--preset--font-size--hero); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; margin: .3em 0 .4em; color: var(--wp--preset--color--frame-ink); }
+.vectra-hero__text { max-width: 46ch; opacity: .85; margin: 0 0 1.5em; }
+.vectra-hero__copy .vectra-eyebrow { color: var(--wp--preset--color--copper); text-transform: uppercase; font-size: var(--wp--preset--font-size--small); margin: 0; }
+.vectra-hero__cta { display: inline-block; text-decoration: none; }
+.vectra-hero__stack { position: relative; height: clamp(260px, 30vw, 380px); }
+.vectra-hero__shot { position: absolute; background: #fff; border-radius: var(--wp--custom--radius--md); padding: 14px; box-sizing: border-box; display: block; }
+.vectra-hero__shot img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.vectra-hero__shot.is-1 { width: 62%; aspect-ratio: 1; right: 14%; top: 4%; z-index: 3; }
+.vectra-hero__shot.is-2 { width: 40%; aspect-ratio: 1; right: 0; bottom: 0; z-index: 2; transform: rotate(5deg); }
+.vectra-hero__shot.is-3 { width: 36%; aspect-ratio: 1; left: 0; bottom: 6%; z-index: 1; transform: rotate(-6deg); }
+.vectra-hero__controls { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 8px; }
+.vectra-hero__dot { width: 10px; height: 10px; border-radius: 999px; border: 0; padding: 0; background: color-mix(in srgb, var(--wp--preset--color--frame-ink) 35%, transparent); cursor: pointer; transition: width .3s ease, background .3s ease; }
+.vectra-hero__dot.is-active { width: 28px; background: var(--wp--preset--color--copper); }
+.vectra-hero__dot:focus-visible { outline: 2px solid var(--wp--preset--color--copper); outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+	.vectra-hero__slide.is-active .vectra-hero__shot.is-1 { animation: vectra-float 7s ease-in-out infinite; }
+	.vectra-hero__slide.is-active .vectra-hero__shot.is-2 { animation: vectra-float-r 8s ease-in-out infinite; }
+	.vectra-hero__slide.is-active .vectra-hero__shot.is-3 { animation: vectra-float-l 9s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) { .vectra-hero__slide, .vectra-hero__slide.is-active { transition: none; transform: none; } }
+@keyframes vectra-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes vectra-float-r { 0%, 100% { transform: rotate(5deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-8px); } }
+@keyframes vectra-float-l { 0%, 100% { transform: rotate(-6deg) translateY(0); } 50% { transform: rotate(-4deg) translateY(-6px); } }
+@media (max-width: 781px) {
+	.vectra-hero__slide { grid-template-columns: 1fr; gap: var(--wp--preset--spacing--space-3); padding-block: var(--wp--preset--spacing--space-5) 56px; }
+	.vectra-hero__stack { height: 220px; order: -1; }
+	.vectra-hero__shot.is-1 { width: 52%; right: 24%; }
+}
+
+/* Rails (categories and products) */
+.vectra-rail { max-width: 1280px; margin: 0 auto var(--wp--preset--spacing--space-8); }
+.vectra-rail__head { display: flex; align-items: center; gap: var(--wp--preset--spacing--space-3); margin-bottom: var(--wp--preset--spacing--space-3); }
+.vectra-rail__head h2 { margin: 0; margin-right: auto; font-size: var(--wp--preset--font-size--h2); }
+.vectra-rail__more { font-weight: 700; font-size: var(--wp--preset--font-size--small); color: var(--wp--preset--color--copper-text); white-space: nowrap; }
+.vectra-rail__nav { display: none; gap: 8px; }
+.vectra-rail.is-scrollable .vectra-rail__nav { display: flex; }
+.vectra-rail__btn { width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--wp--preset--color--hairline); background: var(--wp--preset--color--card); color: var(--wp--preset--color--graphite); display: grid; place-items: center; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.vectra-rail__btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.vectra-rail__btn:hover:not(:disabled) { background: var(--wp--preset--color--graphite); color: var(--wp--preset--color--frame-ink); border-color: var(--wp--preset--color--graphite); }
+.vectra-rail__btn:disabled { opacity: .35; cursor: default; }
+.vectra-rail__btn:focus-visible { outline: 2px solid var(--wp--preset--color--copper); outline-offset: 2px; }
+.vectra-rail__track { list-style: none; margin: 0; padding: 2px 2px 10px; display: grid; grid-auto-flow: column; gap: var(--wp--preset--spacing--space-3); overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; }
+.vectra-rail__track::-webkit-scrollbar { display: none; }
+.vectra-rail__track > li { scroll-snap-align: start; }
+@media (max-width: 781px) { .vectra-rail__nav { display: none !important; } }
+
+/* Category cards */
+.vectra-rail--cats .vectra-rail__track { grid-auto-columns: clamp(130px, 15vw, 170px); }
+.vectra-cat a { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; text-decoration: none; color: var(--wp--preset--color--graphite); }
+.vectra-cat__img { width: 100%; aspect-ratio: 1; border-radius: 999px; background: #fff; border: 1px solid var(--wp--preset--color--hairline); display: grid; place-items: center; overflow: hidden; transition: border-color .2s ease, transform .2s ease; }
+.vectra-cat__img img { width: 72%; height: 72%; object-fit: contain; transition: transform .3s ease; }
+.vectra-cat__name { font-weight: 800; font-size: .875rem; line-height: 1.25; margin-top: 4px; }
+.vectra-cat__count { font-size: var(--wp--preset--font-size--small); color: var(--wp--preset--color--slate); }
+.vectra-cat a:hover .vectra-cat__img { border-color: var(--wp--preset--color--copper); }
+@media (prefers-reduced-motion: no-preference) { .vectra-cat a:hover .vectra-cat__img img { transform: scale(1.07); } }
+
+/* Product cards in rails */
+.vectra-rail--products .vectra-rail__track { grid-auto-columns: clamp(180px, 19%, 236px); }
+.vectra-rail__item { position: relative; display: flex; flex-direction: column; gap: 6px; height: auto; box-sizing: border-box; }
+.vectra-card__img { display: block; background: #fff; border-radius: calc(var(--wp--custom--radius--md) - 4px); aspect-ratio: 1; overflow: hidden; margin-bottom: 6px; padding: 10px; box-sizing: border-box; }
+.vectra-card__img img { width: 100%; height: 100%; object-fit: contain; transition: transform .3s ease; }
+@media (prefers-reduced-motion: no-preference) { .vectra-rail__item:hover .vectra-card__img img { transform: scale(1.04); } }
+.vectra-card__title { font-size: .875rem; line-height: 1.35; margin: 0; font-family: var(--wp--preset--font-family--sans); font-weight: 700; }
+.vectra-card__title a { color: var(--wp--preset--color--graphite); text-decoration: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+.vectra-card__title a:hover { text-decoration: underline; }
+.vectra-card__price { font-weight: 800; font-size: var(--wp--preset--font-size--price); font-variant-numeric: tabular-nums; }
+.vectra-card__price del { font-weight: 500; font-size: .8em; color: var(--wp--preset--color--slate); margin-right: 4px; }
+.vectra-card__price ins { text-decoration: none; }
+.vectra-card__btn { margin-top: auto; text-align: center; text-decoration: none; background: var(--wp--preset--color--graphite); color: var(--wp--preset--color--frame-ink); border-radius: var(--wp--custom--radius--pill); padding: .65rem 1rem; font-weight: 700; font-size: .875rem; }
+.vectra-card__btn:hover { background: var(--wp--preset--color--copper); color: var(--wp--preset--color--copper-ink); }
+.vectra-card__btn.added { display: none; }
+.vectra-rail__item .added_to_cart { text-align: center; font-weight: 700; font-size: .875rem; color: var(--wp--preset--color--copper-text); margin-top: auto; padding: .65rem 0; }
+.vectra-card__badge { position: absolute; top: calc(var(--wp--preset--spacing--space-3) + 8px); left: calc(var(--wp--preset--spacing--space-3) + 8px); z-index: 1; background: var(--wp--preset--color--copper); color: var(--wp--preset--color--copper-ink); font-weight: 800; font-size: .75rem; padding: 2px 8px; border-radius: var(--wp--custom--radius--sm); }
+
+/* Moving brand strip */
+.vectra-brands { padding-block: var(--wp--preset--spacing--space-5); border-block: 1px solid var(--wp--preset--color--hairline); margin-bottom: var(--wp--preset--spacing--space-8); text-align: center; }
+.vectra-brands .vectra-eyebrow { text-transform: uppercase; font-size: var(--wp--preset--font-size--small); color: var(--wp--preset--color--slate); margin: 0 0 var(--wp--preset--spacing--space-3); }
+.vectra-brands__viewport { display: flex; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.vectra-brands__track { list-style: none; margin: 0; padding: 0; display: flex; flex-shrink: 0; gap: 48px; padding-right: 48px; }
+.vectra-brands__track a { font-family: var(--wp--preset--font-family--display); font-weight: 800; font-size: 1.375rem; letter-spacing: -.01em; color: var(--wp--preset--color--slate); text-decoration: none; white-space: nowrap; transition: color .2s ease; }
+.vectra-brands__track a:hover { color: var(--wp--preset--color--graphite); }
+@media (prefers-reduced-motion: no-preference) {
+	.vectra-brands__track { animation: vectra-marquee 40s linear infinite; }
+	.vectra-brands__viewport:hover .vectra-brands__track, .vectra-brands__viewport:focus-within .vectra-brands__track { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) { .vectra-brands__viewport { overflow-x: auto; } .vectra-brands__track[aria-hidden] { display: none; } }
+@keyframes vectra-marquee { to { transform: translateX(-100%); } }
+
+/* No gap between the header and the hero */
+.wp-site-blocks > .vectra-hero, .wp-site-blocks > .vectra-hero--slider { margin-block-start: 0; }
+
+/* Front page main spacing */
+.vectra-home { padding-block: var(--wp--preset--spacing--space-8) 0; }
+
+/* v0.3: promises page and top strip link */
+.vectra-topstrip a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.vectra-trust a { color: var(--wp--preset--color--copper-text); }
+.vectra-page { padding-block: var(--wp--preset--spacing--space-8); }
+.vectra-promises__lede { font-size: 1.25rem; line-height: 1.5; color: var(--wp--preset--color--graphite); margin-block-end: var(--wp--preset--spacing--space-8); text-wrap: pretty; }
+.vectra-promise { border-top: 1px solid var(--wp--preset--color--hairline); padding-block: var(--wp--preset--spacing--space-5); }
+.vectra-promise h2 { margin: 0 0 8px; text-wrap: balance; }
+.vectra-promise p { margin: 0; color: var(--wp--preset--color--slate); max-width: 62ch; }
+.vectra-promises__foot { border-top: 1px solid var(--wp--preset--color--hairline); padding-top: var(--wp--preset--spacing--space-5); }
+
+/* v0.3.1: tighter header, light top strip, tagline under the logo */
+.vectra-header > * + * { margin-block-start: 0; }
+.vectra-header__main { padding-block: 16px; }
+.vectra-topstrip { border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vectra-topstrip a { color: var(--wp--preset--color--copper-text); }
+.vectra-brandmark { gap: 4px; }
+.vectra-brandmark .vectra-logo { margin: 0; }
+.vectra-logo-tag { margin: 0; padding-left: 2px; font-size: 13px; letter-spacing: .01em; color: var(--wp--preset--color--slate); }
+.vectra-header .vectra-logo-tag { color: #9AA5B3; }
+@media (max-width: 600px) { .vectra-topstrip p { font-size: 12px; } }

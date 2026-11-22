@@ -13,6 +13,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'VECTRA_VERSION', wp_get_theme()->get( 'Version' ) );
 
 require_once get_theme_file_path( 'inc/stock.php' );
+require_once get_theme_file_path( 'inc/home.php' );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'woocommerce' );
@@ -24,7 +25,7 @@ add_action( 'after_setup_theme', function () {
 } );
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'vectra', get_theme_file_uri( 'assets/css/vectra.css' ), array(), VECTRA_VERSION );
+	wp_enqueue_style( 'vectra', get_theme_file_uri( 'assets/css/vectra.css' ), array(), VECTRA_VERSION . '.' . filemtime( get_theme_file_path( 'assets/css/vectra.css' ) ) );
 } );
 
 /**
@@ -56,3 +57,30 @@ add_filter( 'woocommerce_get_price_suffix', function ( $suffix, $product ) {
 	}
 	return ' <small class="vectra-vat">' . esc_html__( 'incl. VAT', 'vectra' ) . '</small>';
 }, 10, 2 );
+
+/**
+ * Prices: "R1 099", no cents unless they are non-zero (brand rule 5).
+ */
+add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
+
+/**
+ * WooCommerce auto-inserts account and mini-cart blocks after every Navigation block.
+ * The header places them by hand, so stop the duplicates under the category nav.
+ */
+add_filter( 'hooked_block_types', function ( $hooked, $position, $anchor ) {
+	if ( 'core/navigation' !== $anchor ) {
+		return $hooked;
+	}
+	return array_values( array_diff( $hooked, array( 'woocommerce/customer-account', 'woocommerce/mini-cart' ) ) );
+}, 20, 3 );
+
+/**
+ * "Deals" link: /shop/?on_sale=1 limits the shop to products on sale.
+ */
+add_action( 'pre_get_posts', function ( $q ) {
+	if ( is_admin() || ! $q->is_main_query() || empty( $_GET['on_sale'] ) || ! function_exists( 'is_shop' ) || ! is_shop() ) {
+		return;
+	}
+	$ids = wc_get_product_ids_on_sale();
+	$q->set( 'post__in', $ids ? $ids : array( 0 ) );
+} );
