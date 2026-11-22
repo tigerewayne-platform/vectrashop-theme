@@ -1,0 +1,41 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained","contentSize":"1280px"}} -->
+<main class="wp-block-group">
+<!-- wp:woocommerce/breadcrumbs /-->
+<!-- wp:query-title {"type":"search"} /-->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group">
+<!-- wp:woocommerce/product-results-count /-->
+<!-- wp:woocommerce/catalog-sorting /-->
+</div>
+<!-- /wp:group -->
+<!-- wp:woocommerce/product-collection {"queryId":3,"query":{"perPage":24,"pages":1,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","search":"","exclude":[],"inherit":true,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill"}} -->
+<div class="wp-block-woocommerce-product-collection">
+<!-- wp:woocommerce/product-template -->
+<!-- wp:group {"className":"vectra-card","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+<div class="wp-block-group vectra-card">
+<!-- wp:woocommerce/product-image {"showSaleBadge":true,"isDescendentOfQueryLoop":true,"imageSizing":"thumbnail"} /-->
+<!-- wp:post-terms {"term":"product_brand","className":"vectra-brand-label"} /-->
+<!-- wp:post-title {"level":3,"isLink":true,"__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
+<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
+<!-- wp:vectra/stock-by-warehouse /-->
+<!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /-->
+</div>
+<!-- /wp:group -->
+<!-- /wp:woocommerce/product-template -->
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+<!-- wp:woocommerce/product-collection-no-results -->
+<!-- wp:paragraph -->
+<p>Nothing matches that. Try fewer filters or a different search.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:woocommerce/product-collection-no-results -->
+</div>
+<!-- /wp:woocommerce/product-collection -->
+</main>
+<!-- /wp:group -->
+<!-- wp:pattern {"slug":"vectra/trust-strip"} /-->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

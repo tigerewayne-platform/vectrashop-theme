@@ -1,0 +1,352 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "custom": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "palette": [
+        {
+          "slug": "graphite",
+          "name": "Graphite",
+          "color": "#1b2330"
+        },
+        {
+          "slug": "graphite-frame",
+          "name": "Graphite Frame",
+          "color": "#1b2330"
+        },
+        {
+          "slug": "frame-ink",
+          "name": "Frame Ink",
+          "color": "#f2f4f7"
+        },
+        {
+          "slug": "copper",
+          "name": "Copper",
+          "color": "#e8641c"
+        },
+        {
+          "slug": "copper-ink",
+          "name": "Copper Ink",
+          "color": "#1b2330"
+        },
+        {
+          "slug": "copper-text",
+          "name": "Copper Text",
+          "color": "#b84a0d"
+        },
+        {
+          "slug": "bench",
+          "name": "Bench",
+          "color": "#f5f6f8"
+        },
+        {
+          "slug": "card",
+          "name": "Card",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "tile",
+          "name": "Tile",
+          "color": "#eceff3"
+        },
+        {
+          "slug": "hairline",
+          "name": "Hairline",
+          "color": "#e2e6eb"
+        },
+        {
+          "slug": "slate",
+          "name": "Slate",
+          "color": "#5d6878"
+        },
+        {
+          "slug": "stock-in",
+          "name": "Stock In",
+          "color": "#16834a"
+        },
+        {
+          "slug": "stock-low",
+          "name": "Stock Low",
+          "color": "#b45309"
+        },
+        {
+          "slug": "stock-out",
+          "name": "Stock Out",
+          "color": "#b91c1c"
+        }
+      ]
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fluid": true,
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.8125rem",
+          "fluid": false
+        },
+        {
+          "slug": "body",
+          "name": "Body",
+          "size": "0.9375rem",
+          "fluid": false
+        },
+        {
+          "slug": "price",
+          "name": "Price",
+          "size": "1.125rem",
+          "fluid": false
+        },
+        {
+          "slug": "h2",
+          "name": "Heading 2",
+          "size": "1.375rem",
+          "fluid": {
+            "min": "1.25rem",
+            "max": "1.375rem"
+          }
+        },
+        {
+          "slug": "h1",
+          "name": "Heading 1",
+          "size": "1.875rem",
+          "fluid": {
+            "min": "1.5rem",
+            "max": "1.875rem"
+          }
+        },
+        {
+          "slug": "hero",
+          "name": "Hero",
+          "size": "2.5rem",
+          "fluid": {
+            "min": "1.875rem",
+            "max": "2.5rem"
+          }
+        }
+      ],
+      "fontFamilies": [
+        {
+          "slug": "display",
+          "name": "Display",
+          "fontFamily": "\"Sora\", \"Segoe UI\", system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Sora",
+              "fontStyle": "normal",
+              "fontWeight": "400 800",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/Sora-Variable.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "sans",
+          "name": "Sans",
+          "fontFamily": "\"Manrope\", \"Segoe UI\", system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontStyle": "normal",
+              "fontWeight": "200 800",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/Manrope-Variable.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "mono",
+          "name": "Mono",
+          "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace"
+        }
+      ]
+    },
+    "spacing": {
+      "defaultSpacingSizes": false,
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "space-1",
+          "name": "space-1",
+          "size": "4px"
+        },
+        {
+          "slug": "space-2",
+          "name": "space-2",
+          "size": "8px"
+        },
+        {
+          "slug": "space-3",
+          "name": "space-3",
+          "size": "12px"
+        },
+        {
+          "slug": "space-5",
+          "name": "space-5",
+          "size": "20px"
+        },
+        {
+          "slug": "space-8",
+          "name": "space-8",
+          "size": "32px"
+        }
+      ]
+    },
+    "custom": {
+      "radius": {
+        "sm": "6px",
+        "md": "14px",
+        "pill": "999px"
+      },
+      "brandVersion": 1
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--bench)",
+      "text": "var(--wp--preset--color--graphite)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sans)",
+      "fontSize": "var(--wp--preset--font-size--body)",
+      "fontWeight": "500",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "padding": {
+        "left": "max(16px, 3vw)",
+        "right": "max(16px, 3vw)"
+      },
+      "blockGap": "var(--wp--preset--spacing--space-5)"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontWeight": "700",
+          "lineHeight": "1.2",
+          "letterSpacing": "-0.01em"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h1)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h2)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "1.125rem"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--copper-text)"
+        },
+        "typography": {
+          "textDecoration": "underline"
+        },
+        ":hover": {
+          "typography": {
+            "textDecoration": "none"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--copper)",
+          "text": "var(--wp--preset--color--copper-ink)"
+        },
+        "border": {
+          "radius": "999px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.7rem",
+            "bottom": "0.7rem",
+            "left": "1.25rem",
+            "right": "1.25rem"
+          }
+        },
+        "typography": {
+          "fontWeight": "700",
+          "fontSize": "0.875rem"
+        },
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--graphite)",
+            "text": "var(--wp--preset--color--frame-ink)"
+          }
+        },
+        ":focus": {
+          "outline": {
+            "color": "var(--wp--preset--color--copper)",
+            "offset": "2px",
+            "style": "solid",
+            "width": "2px"
+          }
+        }
+      }
+    },
+    "blocks": {
+      "core/search": {
+        "border": {
+          "radius": "999px"
+        }
+      },
+      "core/separator": {
+        "color": {
+          "text": "var(--wp--preset--color--hairline)"
+        }
+      },
+      "woocommerce/product-price": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--price)",
+          "fontWeight": "800"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontWeight": "700"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+name: Checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  lint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: PHP syntax
+        run: find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+      - name: theme.json is in sync with brand tokens
+        run: |
+          python3 scripts/build_theme_json.py
+          git diff --exit-code theme.json || (echo "theme.json is out of date. Run: python3 scripts/build_theme_json.py" && exit 1)
+      - name: JSON is valid
+        run: python3 -c "import json; json.load(open('theme.json'))"

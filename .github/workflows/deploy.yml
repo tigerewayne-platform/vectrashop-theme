@@ -1,0 +1,36 @@
+name: Deploy theme
+# main deploys to staging automatically. Production deploys only when someone runs this workflow by hand
+# and picks "production", and the production environment can require approval in GitHub settings.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Where to deploy
+        type: choice
+        options: [staging, production]
+        default: staging
+concurrency:
+  group: deploy-${{ github.event.inputs.target || 'staging' }}
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment: ${{ github.event.inputs.target || 'staging' }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Upload theme over FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ${{ vars.THEME_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            scripts/**
+            README.md

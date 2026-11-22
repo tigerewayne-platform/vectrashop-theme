@@ -1,0 +1,57 @@
+/* Small additions theme.json cannot express. Colours only via --wp--preset--color--* tokens. */
+
+/* Stock by warehouse */
+.vectra-stock { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: var(--wp--preset--font-size--small); font-weight: 600; }
+.vectra-stock__row { display: inline-flex; align-items: center; gap: 6px; }
+.vectra-stock__row i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: currentColor; }
+.vectra-stock__row b { font-weight: 800; letter-spacing: .04em; }
+.vectra-stock__row.is-in  { color: var(--wp--preset--color--stock-in); }
+.vectra-stock__row.is-low, .vectra-stock__row.is-eta { color: var(--wp--preset--color--stock-low); }
+.vectra-stock__row.is-out { color: var(--wp--preset--color--stock-out); }
+
+/* Prices line up in grids */
+.wc-block-components-product-price, .woocommerce-Price-amount, .vectra-price { font-variant-numeric: tabular-nums; }
+.vectra-vat { font-size: var(--wp--preset--font-size--small); font-weight: 500; color: var(--wp--preset--color--slate); }
+
+/* Product cards: borders, not shadows */
+.vectra-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-3); height: 100%; }
+.vectra-card .wc-block-components-product-image img,
+.vectra-card .wp-block-woocommerce-product-image img { background: #fff; border-radius: calc(var(--wp--custom--radius--md) - 4px); aspect-ratio: 1; object-fit: contain; }
+.vectra-card .wp-block-post-title { font-size: 0.875rem; line-height: 1.35; }
+.vectra-card .wp-block-post-title a { color: var(--wp--preset--color--graphite); text-decoration: none; }
+.vectra-card .wp-block-post-title a:hover { text-decoration: underline; }
+.vectra-brand-label, .vectra-brand-label a { font-size: 0.6875rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--wp--preset--color--slate); text-decoration: none; }
+.vectra-card .wp-block-button__link, .vectra-card .wc-block-components-product-button__button { width: 100%; background: var(--wp--preset--color--graphite); color: var(--wp--preset--color--frame-ink); border-radius: var(--wp--custom--radius--pill); }
+.vectra-card .wc-block-components-product-sale-badge { background: var(--wp--preset--color--copper); color: var(--wp--preset--color--copper-ink); border: 0; border-radius: var(--wp--custom--radius--sm); font-weight: 800; }
+
+/* Header */
+.vectra-header .wp-block-search__input { border-radius: var(--wp--custom--radius--pill); border: 0; padding-inline: 1rem; }
+.vectra-header .wp-block-search__inside-wrapper { border: 0; background: var(--wp--preset--color--card); border-radius: var(--wp--custom--radius--pill); }
+.vectra-header .wp-block-search { flex: 1 1 260px; min-width: 0; max-width: 640px; }
+.vectra-catnav { overflow-x: auto; white-space: nowrap; }
+.vectra-catnav a { text-decoration: none; }
+
+/* Category tiles */
+.vectra-tile { background: var(--wp--preset--color--tile); border-radius: var(--wp--custom--radius--md); text-align: center; }
+.vectra-tile a { color: var(--wp--preset--color--graphite); text-decoration: none; font-weight: 700; }
+.vectra-tile a::after { content: ""; position: absolute; inset: 0; }
+.vectra-tile { position: relative; }
+
+@media (prefers-reduced-motion: no-preference) {
+	.vectra-card { transition: border-color .15s ease; }
+	.vectra-card:hover { border-color: var(--wp--preset--color--slate); }
+}
+
+/* Links on dark frames */
+.vectra-header a, .vectra-footer a, .vectra-hero a:not(.wp-element-button) { color: var(--wp--preset--color--frame-ink); }
+.vectra-footer ul { list-style: none; padding-left: 0; }
+.vectra-header__main, .vectra-footer, .vectra-hero, .vectra-trust { padding-block: var(--wp--preset--spacing--space-5); }
+.vectra-topstrip { padding-block: 6px; }
+.vectra-topstrip p { margin: 0; }
+.vectra-catnav { padding-block: 10px; border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vectra-hero { padding-block: var(--wp--preset--spacing--space-8); }
+.vectra-hero__mark img { max-width: 260px; margin-inline: auto; display: block; }
+.vectra-eyebrow { letter-spacing: .1em; font-weight: 800; }
+.vectra-tile { padding: var(--wp--preset--spacing--space-5) var(--wp--preset--spacing--space-3); }
+.vectra-tile p { margin: 0; }
+main.wp-block-group { padding-block: var(--wp--preset--spacing--space-8); }

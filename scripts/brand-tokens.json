@@ -1,0 +1,59 @@
+{
+  "name": "Vectra Shop",
+  "version": 1,
+  "color": {
+    "themes": [{"id": "light", "name": "Light"}, {"id": "dark", "name": "Dark"}],
+    "tokens": [
+      {"name": "graphite", "value": {"light": "#1b2330", "dark": "#e6eaf0"}, "usage": "Primary ink. Body text, headings, prices. 14.6:1 on bench."},
+      {"name": "graphite-frame", "value": {"light": "#1b2330", "dark": "#0b1016"}, "usage": "The frame: site header, hero panels, footer. Always paired with frame-ink."},
+      {"name": "frame-ink", "value": {"light": "#f2f4f7", "dark": "#e6eaf0"}, "usage": "Text and icons on graphite-frame."},
+      {"name": "copper", "value": {"light": "#e8641c", "dark": "#f08a4b"}, "usage": "The one loud colour. Buy buttons, sale badges, active states. Text on copper is graphite (4.7:1), never white (3.4:1 fails)."},
+      {"name": "copper-ink", "value": {"light": "#1b2330", "dark": "#121820"}, "usage": "Text and icons placed on copper."},
+      {"name": "copper-text", "value": {"light": "#b84a0d", "dark": "#f08a4b"}, "usage": "Copper used as text or links on light grounds (5.2:1 on white). Never use plain copper for text."},
+      {"name": "bench", "value": {"light": "#f5f6f8", "dark": "#121820"}, "usage": "Page background."},
+      {"name": "card", "value": {"light": "#ffffff", "dark": "#1a2129"}, "usage": "Product cards, panels, inputs. Packshots always sit on white in light theme."},
+      {"name": "tile", "value": {"light": "#eceff3", "dark": "#232b35"}, "usage": "Category tiles, chips, quiet fills."},
+      {"name": "hairline", "value": {"light": "#e2e6eb", "dark": "#2c3440"}, "usage": "Card borders and dividers. Borders, not shadows."},
+      {"name": "slate", "value": {"light": "#5d6878", "dark": "#9aa5b3"}, "usage": "Secondary text: brand line, VAT note, was-price. 5.6:1 on white."},
+      {"name": "stock-in", "value": {"light": "#16834a", "dark": "#34c27a"}, "usage": "In stock. Stock status only, never decoration."},
+      {"name": "stock-low", "value": {"light": "#b45309", "dark": "#f5a524"}, "usage": "Low stock (5 or fewer at a warehouse) or incoming with an ETA."},
+      {"name": "stock-out", "value": {"light": "#b91c1c", "dark": "#f87171"}, "usage": "Out of stock at that warehouse. Also form errors."}
+    ]
+  },
+  "type": {
+    "families": {
+      "display": "\"Sora\", \"Segoe UI\", system-ui, sans-serif",
+      "sans": "\"Manrope\", \"Segoe UI\", system-ui, sans-serif",
+      "mono": "\"JetBrains Mono\", ui-monospace, monospace"
+    },
+    "groups": [
+      {"name": "Display", "family": "display", "styles": [
+        {"name": "hero", "fontSize": "40px", "lineHeight": "44px", "fontWeight": 800, "letterSpacing": "-0.02em"},
+        {"name": "h1", "fontSize": "30px", "lineHeight": "36px", "fontWeight": 700, "letterSpacing": "-0.01em"},
+        {"name": "h2", "fontSize": "22px", "lineHeight": "28px", "fontWeight": 700}
+      ]},
+      {"name": "Text", "family": "sans", "styles": [
+        {"name": "body", "fontSize": "15px", "lineHeight": "24px", "fontWeight": 500},
+        {"name": "product-name", "fontSize": "14px", "lineHeight": "20px", "fontWeight": 700},
+        {"name": "price", "fontSize": "18px", "lineHeight": "24px", "fontWeight": 800},
+        {"name": "label", "fontSize": "11px", "lineHeight": "16px", "fontWeight": 700, "letterSpacing": "0.06em"},
+        {"name": "small", "fontSize": "12px", "lineHeight": "16px", "fontWeight": 500}
+      ]},
+      {"name": "Data", "family": "mono", "styles": [
+        {"name": "sku", "fontSize": "12px", "lineHeight": "16px", "fontWeight": 500}
+      ]}
+    ]
+  },
+  "spacing": {"tokens": [
+    {"name": "space-1", "value": "4px", "usage": "Icon to label, badge padding."},
+    {"name": "space-2", "value": "8px", "usage": "Inside cards between lines, chip gaps."},
+    {"name": "space-3", "value": "12px", "usage": "Card padding, product grid gap."},
+    {"name": "space-5", "value": "20px", "usage": "Section padding on mobile, gaps between blocks."},
+    {"name": "space-8", "value": "32px", "usage": "Gaps between homepage sections on desktop."}
+  ]},
+  "radius": {"tokens": [
+    {"name": "radius-sm", "value": "6px", "usage": "Badges, inputs."},
+    {"name": "radius-md", "value": "14px", "usage": "Product cards, category tiles, hero panels."},
+    {"name": "radius-pill", "value": "999px", "usage": "Buttons, chips, search bar."}
+  ]}
+}
