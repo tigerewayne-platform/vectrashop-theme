@@ -51,6 +51,7 @@ $vectra_home = esc_url( home_url( '/' ) );
 <!-- wp:navigation-link {"label":"Power &amp; backup","url":"/product-category/power/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Home tech","url":"/product-category/lifestyle-home-tech/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Software","url":"/product-category/software/","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Appliances","url":"/product-category/appliances/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Deals","url":"/shop/?on_sale=1","kind":"custom"} /-->
 <!-- /wp:navigation -->
 </div>

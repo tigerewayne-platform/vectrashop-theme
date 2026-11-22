@@ -14,10 +14,12 @@
 .vectra-vat { font-size: var(--wp--preset--font-size--small); font-weight: 500; color: var(--wp--preset--color--slate); }
 
 /* Product cards: borders, not shadows */
-.vectra-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-3); height: 100%; }
+.vectra-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-3); height: 100%; display: flex; flex-direction: column; }
+.vectra-card > .wp-block-woocommerce-product-button { margin-top: auto; align-self: stretch; }
+.vectra-card .wc-block-components-product-button { align-items: stretch; }
 .vectra-card .wc-block-components-product-image img,
 .vectra-card .wp-block-woocommerce-product-image img { background: #fff; border-radius: calc(var(--wp--custom--radius--md) - 4px); aspect-ratio: 1; object-fit: contain; }
-.vectra-card .wp-block-post-title { font-size: 0.875rem; line-height: 1.35; }
+.vectra-card .wp-block-post-title { font-size: 0.875rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .vectra-card .wp-block-post-title a { color: var(--wp--preset--color--graphite); text-decoration: none; }
 .vectra-card .wp-block-post-title a:hover { text-decoration: underline; }
 .vectra-brand-label, .vectra-brand-label a { font-size: 0.6875rem; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--wp--preset--color--slate); text-decoration: none; }
