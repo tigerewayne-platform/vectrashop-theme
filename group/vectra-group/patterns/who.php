@@ -5,9 +5,9 @@
  * Categories: vectra-group
  */
 $vg_who = array(
-	array( 'Offices of 10 to 200 people', 'New-starter kits, refresh cycles and the odd urgent replacement, without a procurement department.' ),
-	array( 'Schools', 'Staff laptops, lab refreshes and classroom displays, quoted the way governing bodies need to see them.' ),
-	array( 'IT service providers', 'Order on your client\'s behalf, with the paperwork addressed to them. Talk to us about partner pricing.' ),
+	array( 'Small and medium businesses', 'From a five-person office to a few hundred staff, in South Africa and Zimbabwe. New-starter kits, refresh cycles and the urgent replacement, without a procurement department.' ),
+	array( 'Government in Zimbabwe', 'Ministries, departments and parastatals, quoted against your tender in USD, with the compliance pack ready.' ),
+	array( 'IT service providers', 'Order on your client\'s behalf, with the paperwork addressed to them. Ask about partner pricing.' ),
 );
 ?>
 <!-- wp:group {"className":"vg-section","layout":{"type":"default"}} -->
@@ -16,7 +16,7 @@ $vg_who = array(
 <p class="vg-label">Who we work with</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading -->
-<h2 class="wp-block-heading">Built for the person who runs IT on the side.</h2>
+<h2 class="wp-block-heading">SMEs in two countries, and government in Zimbabwe.</h2>
 <!-- /wp:heading -->
 <!-- wp:group {"className":"vg-grid","layout":{"type":"grid","minimumColumnWidth":"16rem"}} -->
 <div class="wp-block-group vg-grid">

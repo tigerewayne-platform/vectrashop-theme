@@ -100,3 +100,16 @@ main.vg-home { padding-top: 0; }
 	.vg-tfact, .vg-tfact + .vg-tfact { padding: 20px 0; border-left: 0; border-top: 1px solid var(--wp--preset--color--hairline); }
 	.vg-support { padding: 28px; }
 }
+
+/* Government and tenders */
+.vg-gov .wp-block-columns { gap: 64px; }
+.vg-gov-points { list-style: none; padding: 0; margin: 8px 0 20px; border-top: 1px solid var(--wp--preset--color--hairline); }
+.vg-gov-points li { display: grid; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vg-gov-points span { color: var(--wp--preset--color--slate); font-size: .875rem; }
+.vg-pack { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: 18px; padding: 26px; display: grid; gap: 14px; }
+.vg-pack__head { display: grid; gap: 4px; padding-bottom: 12px; border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vg-pack__head b { font-family: var(--wp--preset--font-family--display); font-size: 1.0625rem; }
+.vg-pack ul { list-style: none; padding: 0; margin: 0; }
+.vg-pack li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--wp--preset--color--hairline); font-weight: 700; font-size: .875rem; }
+.vg-pack em { font-style: normal; font-size: .75rem; color: var(--wp--preset--color--slate); white-space: nowrap; }
+.vg-pack p { margin: 0; font-size: .8125rem; }

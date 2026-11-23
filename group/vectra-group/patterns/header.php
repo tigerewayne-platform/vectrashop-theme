@@ -22,6 +22,7 @@ $vg_home = esc_url( home_url( '/' ) );
 <!-- wp:navigation-link {"label":"Get a quote","url":"/#quote","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Catalogue","url":"/shop/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Managed support","url":"/#support","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Government","url":"/#government","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Offices","url":"/#offices","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Why Vectra","url":"/#why","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"My account","url":"/my-account/","kind":"custom"} /-->

@@ -100,9 +100,9 @@ add_shortcode( 'vectra_b2b_register', function () {
 			<label><span><?php esc_html_e( 'Registration number', 'vectra-b2b' ); ?></span><input name="reg_no" placeholder="2019/123456/07"></label>
 			<label><span><?php esc_html_e( 'VAT number', 'vectra-b2b' ); ?></span><input name="vat_no" placeholder="4XXXXXXXXX"></label>
 			<label><span><?php esc_html_e( 'Type of organisation', 'vectra-b2b' ); ?></span>
-				<select name="sector"><option value="office"><?php esc_html_e( 'Business / office', 'vectra-b2b' ); ?></option><option value="school"><?php esc_html_e( 'School', 'vectra-b2b' ); ?></option><option value="partner"><?php esc_html_e( 'IT service provider', 'vectra-b2b' ); ?></option><option value="other"><?php esc_html_e( 'Other', 'vectra-b2b' ); ?></option></select></label>
+				<select name="sector"><option value="office"><?php esc_html_e( 'Business / office', 'vectra-b2b' ); ?></option><option value="government"><?php esc_html_e( 'Government or parastatal (Zimbabwe)', 'vectra-b2b' ); ?></option><option value="school"><?php esc_html_e( 'School', 'vectra-b2b' ); ?></option><option value="partner"><?php esc_html_e( 'IT service provider', 'vectra-b2b' ); ?></option><option value="other"><?php esc_html_e( 'Other', 'vectra-b2b' ); ?></option></select></label>
 			<label><span><?php esc_html_e( 'Number of staff', 'vectra-b2b' ); ?></span>
-				<select name="staff"><option>1-9</option><option selected>10-49</option><option>50-200</option><option>200+</option></select></label>
+				<select name="staff"><option selected>1-9</option><option>10-49</option><option>50-200</option><option>200+</option></select></label>
 			<label><span><?php esc_html_e( 'Your name', 'vectra-b2b' ); ?></span><input name="contact" required autocomplete="name"></label>
 			<label><span><?php esc_html_e( 'Work email', 'vectra-b2b' ); ?></span><input type="email" name="email" required autocomplete="email"></label>
 			<label><span><?php esc_html_e( 'Phone', 'vectra-b2b' ); ?></span><input name="phone" autocomplete="tel"></label>

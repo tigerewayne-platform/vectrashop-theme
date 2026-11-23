@@ -6,7 +6,7 @@ There are two parts:
 
 | Folder | What it is |
 | --- | --- |
-| `vectra-group/` | Child theme of the Vectra shop theme. It adds the Group logo, the premium homepage (quote box, commitments, offices in Sandton, Cape Town and Harare, managed support, procurement facts) and business copy. Prices show ex VAT. |
+| `vectra-group/` | Child theme of the Vectra shop theme. It adds the Group logo, the premium homepage (quote box, commitments, offices in Harare, Sandton and Cape Town, a Zimbabwe government and tenders section with a compliance pack, managed support, procurement facts) and business copy. Audience: SMEs in South Africa and Zimbabwe, and government in Zimbabwe. IT only. Prices show ex VAT. |
 | `vectra-b2b/` | Plugin that does the B2B work: business sign-up and approval, prices behind login, RFQ to quote, price held and stock reserved until 17:00 on the last day, a quote page with a live countdown, accept to checkout at the held price, PO number and cost centre at checkout, pay on a 30-day account with a credit limit, saved kits, and an asset register with serials and warranty dates (CSV export). |
 
 ## Install on a fresh WordPress
@@ -40,4 +40,5 @@ There are two parts:
 - Several buyers per company with approval limits. Today each login is its own account.
 - Reading Word and Excel RFQs. The box asks people to paste those.
 - Fleet-change alerts sent 60 days ahead. The fleet standard is shown in the account but not yet monitored.
-- Office street addresses and phone numbers, the B-BBEE level, and the managed support costing still need Wayne's input.
+- Office street addresses and phone numbers, the B-BBEE level, the managed support costing, and the Zimbabwe compliance documents (PRAZ, ZIMRA tax clearance, CR14, NSSA, incorporation, HP letter) still need Wayne's input.
+- USD pricing for Zimbabwe tenders. Quotes are in rand today; tender quotes are prepared by hand from the Harare office.

@@ -18,7 +18,7 @@ $vg_logo = esc_url( get_stylesheet_directory_uri() . '/assets/logo/vectra-group-
 <figure class="wp-block-image size-full is-resized"><img src="<?php echo $vg_logo; ?>" alt="Vectra Group" style="width:170px"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
-<p>IT equipment and managed support for offices and schools in South Africa and Zimbabwe. Buying for home? Visit <a href="https://www.vectrashop.co.za">vectrashop.co.za</a>.</p>
+<p>IT equipment and managed support for SMEs in South Africa and Zimbabwe, and government in Zimbabwe. Buying for home? Visit <a href="https://www.vectrashop.co.za">vectrashop.co.za</a>.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->

@@ -12,16 +12,16 @@
 <!-- wp:column {"verticalAlignment":"top","width":"46%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:46%">
 <!-- wp:paragraph {"className":"vg-eyebrow-line"} -->
-<p class="vg-eyebrow-line">Sandton · Cape Town · Harare</p>
+<p class="vg-eyebrow-line">Harare · Sandton · Cape Town</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":1,"fontSize":"hero"} -->
 <h1 class="wp-block-heading has-hero-font-size">IT procurement that holds its price.</h1>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"className":"vg-hero__lede"} -->
-<p class="vg-hero__lede">Send us your spec, shopping list or RFQ. In about a minute you have a priced quote, with stock reserved in your name until it expires. One supplier for your offices in South Africa and Zimbabwe.</p>
+<p class="vg-hero__lede">Send us your spec, shopping list or RFQ. In about a minute you have a priced quote, with stock reserved in your name until it expires. One supplier for business and government in Zimbabwe and South Africa.</p>
 <!-- /wp:paragraph -->
 <!-- wp:html -->
-<dl class="vg-facts"><div><dt>60 sec</dt><dd>from RFQ to priced quote</dd></div><div><dt>4 days</dt><dd>price and stock held</dd></div><div><dt>2 countries</dt><dd>one account, one invoice trail</dd></div></dl>
+<dl class="vg-facts"><div><dt>60 sec</dt><dd>from RFQ to priced quote</dd></div><div><dt>4 days</dt><dd>price and stock held</dd></div><div><dt>USD or ZAR</dt><dd>quoted in your currency</dd></div></dl>
 <!-- /wp:html -->
 </div>
 <!-- /wp:column -->
