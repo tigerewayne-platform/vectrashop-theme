@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vectra B2B
  * Description: Business buying for the Vectra Group site: approved business accounts, prices behind login, RFQ-to-quote with held prices and reserved stock, PO and cost centre at checkout, 30-day account payment, saved kits and an asset register.
- * Version: 0.1.0
+ * Version: 0.1.2
  * Author: The Vectra Group
  * Requires at least: 6.6
  * Requires PHP: 8.1
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VECTRA_B2B_VERSION', '0.1.0' );
+define( 'VECTRA_B2B_VERSION', '0.1.2' );
 define( 'VECTRA_B2B_FILE', __FILE__ );
 define( 'VECTRA_B2B_DIR', plugin_dir_path( __FILE__ ) );
 define( 'VECTRA_B2B_URL', plugin_dir_url( __FILE__ ) );

@@ -70,6 +70,17 @@ add_filter( 'rest_post_dispatch', function ( $response, $server, $request ) {
 	return $response;
 }, 10, 3 );
 
+/**
+ * Product structured data (JSON-LD) carries offers.price straight from get_price(),
+ * which would put trade prices in the page source for guests and search engines.
+ */
+add_filter( 'woocommerce_structured_data_product', function ( $markup ) {
+	if ( ! vectra_b2b_is_approved() && is_array( $markup ) ) {
+		unset( $markup['offers'] );
+	}
+	return $markup;
+}, 50 );
+
 /* ---------- Sign-up form: [vectra_b2b_register] ---------- */
 
 add_shortcode( 'vectra_b2b_register', function () {
