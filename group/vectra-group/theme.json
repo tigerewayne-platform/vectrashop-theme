@@ -1,0 +1,7 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"customTemplates": [
+		{ "name": "page-quote", "title": "Quote (wide, no title)", "postTypes": [ "page" ] }
+	]
+}

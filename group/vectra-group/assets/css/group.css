@@ -1,0 +1,115 @@
+/* Vectra Group additions on top of the Vectra theme. Colours only via --wp--preset--color--* tokens. */
+
+/* Header */
+.vg-header .vectra-header__main { padding-block: 14px; border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 12%, transparent); }
+.vg-nav a { color: var(--wp--preset--color--frame-ink); opacity: .8; text-decoration: none; }
+.vg-nav a:hover, .vg-nav .current-menu-item a { opacity: 1; }
+.vg-header .wp-block-navigation { flex: 1; justify-content: center; }
+.vg-header__cta .wp-block-button__link { padding: 10px 18px; }
+
+/* Shared */
+.vg-label { font-size: 0.6875rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--wp--preset--color--slate); margin: 0; }
+.vg-eyebrow { font-size: 0.6875rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; opacity: .75; margin: 0; }
+.vg-muted { color: var(--wp--preset--color--slate); }
+.vg-frame-soft { opacity: .8; }
+.vg-section { padding-block: var(--wp--preset--spacing--space-8); display: grid; gap: var(--wp--preset--spacing--space-3); }
+.vg-section > h2 { margin: 0 0 var(--wp--preset--spacing--space-3); max-width: 28ch; text-wrap: balance; }
+.vg-grid { gap: var(--wp--preset--spacing--space-3); }
+.vg-card { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); padding: var(--wp--preset--spacing--space-5); display: flex; flex-direction: column; gap: var(--wp--preset--spacing--space-2); }
+.vg-card > * { margin: 0; }
+.vg-eg { margin-top: auto !important; font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; line-height: 1.5; background: var(--wp--preset--color--tile); border-radius: var(--wp--custom--radius--sm); padding: 8px 10px; }
+.vg-fact { font-family: var(--wp--preset--font-family--display); font-weight: 800; font-size: 1.25rem; line-height: 1.2; }
+
+/* Hero */
+.vg-hero { padding-block: 48px 56px; }
+.vg-hero h1 { margin-block: 12px 16px; text-wrap: balance; }
+.vg-hero__cols { gap: 40px; }
+.vg-hero__lede { opacity: .8; font-size: 1.0625rem; line-height: 1.6; max-width: 46ch; }
+.vg-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.vg-chips span { border-radius: var(--wp--custom--radius--pill); padding: 4px 12px; font-size: 0.75rem; font-weight: 700; background: color-mix(in srgb, var(--wp--preset--color--frame-ink) 10%, transparent); }
+
+/* Steps */
+.vg-steps { gap: 0; border: 1px solid var(--wp--preset--color--hairline); border-radius: var(--wp--custom--radius--md); background: var(--wp--preset--color--card); overflow: hidden; }
+.vg-step { padding: var(--wp--preset--spacing--space-5); border-left: 1px solid var(--wp--preset--color--hairline); display: flex; flex-direction: column; gap: 6px; }
+.vg-step:first-child { border-left: 0; }
+.vg-step > * { margin: 0; }
+.vg-step__n { font-family: var(--wp--preset--font-family--display); font-weight: 800; color: var(--wp--preset--color--copper-text); }
+.vg-step__t { font-family: var(--wp--preset--font-family--mono); font-size: 0.75rem; color: var(--wp--preset--color--slate); }
+@media (max-width: 900px) { .vg-step { border-left: 0; border-top: 1px solid var(--wp--preset--color--hairline); } .vg-step:first-child { border-top: 0; } }
+
+/* Support band */
+.vg-support { border-radius: var(--wp--custom--radius--md); padding: 28px; margin-block: var(--wp--preset--spacing--space-8); }
+.vg-support ul { padding-left: 18px; }
+.vg-price-big { font-family: var(--wp--preset--font-family--display); font-weight: 800; font-size: 2.5rem; line-height: 1; letter-spacing: -.02em; }
+.vg-price-big small { font-family: var(--wp--preset--font-family--sans); font-size: 0.875rem; font-weight: 700; opacity: .8; letter-spacing: 0; }
+main.vg-home { padding-block: 0 var(--wp--preset--spacing--space-8); }
+
+/* ---------- Premium pass (matches the prototype) ---------- */
+main.vg-home { padding-top: 0; }
+.vg-hero { position: relative; overflow: hidden; padding-block: 88px 96px; margin-top: 0 !important;
+	background-image: linear-gradient(color-mix(in srgb, var(--wp--preset--color--frame-ink) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--wp--preset--color--frame-ink) 7%, transparent) 1px, transparent 1px);
+	background-size: 64px 64px; }
+.vg-hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 90% at 20% 40%, transparent 0, var(--wp--preset--color--graphite-frame) 75%); pointer-events: none; }
+.vg-hero > * { position: relative; z-index: 1; }
+.vg-hero__cols { gap: 56px; align-items: center !important; }
+.vg-hero h1 { font-size: clamp(2.375rem, 5.6vw, 4.125rem); line-height: 1.02; letter-spacing: -.035em; max-width: 13ch; }
+.vg-eyebrow-line { display: inline-flex; align-items: center; gap: 12px; font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; opacity: .75; margin: 0; }
+.vg-eyebrow-line::before { content: ""; width: 28px; height: 2px; background: var(--wp--preset--color--copper); }
+.vg-facts { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 12px 0 0; padding-top: 22px; border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 14%, transparent); }
+.vg-facts div + div { padding-left: 28px; border-left: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 14%, transparent); }
+.vg-facts dt { font-family: var(--wp--preset--font-family--display); font-weight: 800; font-size: 1.5rem; letter-spacing: -.02em; }
+.vg-facts dd { margin: 4px 0 0; font-size: .8125rem; opacity: .75; }
+.vg-partners { background: var(--wp--preset--color--card); border-bottom: 1px solid var(--wp--preset--color--hairline); padding-block: 18px; margin-top: 0 !important; font-size: .8125rem; }
+.vg-partners p { margin: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.vg-pmark { font-family: var(--wp--preset--font-family--display); font-size: 1.25rem; letter-spacing: -.02em; }
+.vg-section { padding-block: 96px; }
+.vg-section > h2, .vg-offices-band h2 { font-size: clamp(1.75rem, 3.6vw, 2.625rem); letter-spacing: -.025em; line-height: 1.08; margin-bottom: 28px; }
+.vg-label { letter-spacing: .16em; }
+.vg-pledges { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--wp--preset--color--hairline); }
+.vg-pledge { padding: 32px 40px 36px 0; border-bottom: 1px solid var(--wp--preset--color--hairline); display: flex; flex-direction: column; gap: 12px; margin: 0 !important; }
+.vg-pledge:nth-child(2n) { padding-left: 40px; padding-right: 0; border-left: 1px solid var(--wp--preset--color--hairline); }
+.vg-pledge > * { margin: 0; }
+.vg-pledge .vg-eg { align-self: flex-start; margin-top: 4px !important; }
+.vg-offices-band { padding-block: 96px; }
+.vg-offices { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 14%, transparent); margin-top: 28px; }
+.vg-office { padding: 32px 32px 28px 0; display: flex; flex-direction: column; gap: 10px; margin: 0 !important; }
+.vg-office + .vg-office { padding-left: 32px; border-left: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 14%, transparent); }
+.vg-office > * { margin: 0; }
+.vg-office__country { font-size: .6875rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; opacity: .75; }
+.vg-office__city { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.vg-office__foot { display: flex; gap: 14px; align-items: center; margin-top: 10px !important; font-size: .8125rem; }
+.vg-otime { font-family: var(--wp--preset--font-family--display); font-weight: 700; font-size: .9375rem; }
+.vg-ostate { display: inline-flex; align-items: center; gap: 6px; opacity: .8; }
+.vg-ostate::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .6; }
+.vg-ostate.is-open::before { background: var(--wp--preset--color--stock-in); opacity: 1; }
+.vg-steps, .vg-card { border-radius: 18px; }
+.vg-step__n { font-family: var(--wp--preset--font-family--mono) !important; font-weight: 600 !important; font-size: .75rem; letter-spacing: .06em; }
+.vg-support { border-radius: 22px; padding: 48px; background-image: radial-gradient(ellipse 60% 120% at 100% 0, color-mix(in srgb, var(--wp--preset--color--copper) 16%, transparent), transparent 60%); }
+.vg-price-big { font-size: 4rem; }
+.vg-facts-row { gap: 0 !important; border-top: 1px solid var(--wp--preset--color--hairline); }
+.vg-tfact { padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 8px; margin: 0 !important; }
+.vg-tfact + .vg-tfact { padding-left: 24px; border-left: 1px solid var(--wp--preset--color--hairline); }
+.vg-tfact > * { margin: 0; }
+@media (max-width: 900px) {
+	.vg-hero { padding-block: 56px 64px; }
+	.vg-section, .vg-offices-band { padding-block: 64px; }
+	.vg-pledges, .vg-offices { grid-template-columns: 1fr; }
+	.vg-pledge, .vg-pledge:nth-child(2n) { padding: 28px 0; border-left: 0; }
+	.vg-office, .vg-office + .vg-office { padding: 24px 0; border-left: 0; border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--frame-ink) 14%, transparent); }
+	.vg-office:first-child { border-top: 0; }
+	.vg-tfact, .vg-tfact + .vg-tfact { padding: 20px 0; border-left: 0; border-top: 1px solid var(--wp--preset--color--hairline); }
+	.vg-support { padding: 28px; }
+}
+
+/* Government and tenders */
+.vg-gov .wp-block-columns { gap: 64px; }
+.vg-gov-points { list-style: none; padding: 0; margin: 8px 0 20px; border-top: 1px solid var(--wp--preset--color--hairline); }
+.vg-gov-points li { display: grid; gap: 2px; padding: 14px 0; border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vg-gov-points span { color: var(--wp--preset--color--slate); font-size: .875rem; }
+.vg-pack { background: var(--wp--preset--color--card); border: 1px solid var(--wp--preset--color--hairline); border-radius: 18px; padding: 26px; display: grid; gap: 14px; }
+.vg-pack__head { display: grid; gap: 4px; padding-bottom: 12px; border-bottom: 1px solid var(--wp--preset--color--hairline); }
+.vg-pack__head b { font-family: var(--wp--preset--font-family--display); font-size: 1.0625rem; }
+.vg-pack ul { list-style: none; padding: 0; margin: 0; }
+.vg-pack li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--wp--preset--color--hairline); font-weight: 700; font-size: .875rem; }
+.vg-pack em { font-style: normal; font-size: .75rem; color: var(--wp--preset--color--slate); white-space: nowrap; }
+.vg-pack p { margin: 0; font-size: .8125rem; }
